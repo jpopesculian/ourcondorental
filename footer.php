@@ -22,7 +22,7 @@
                 <h3>Properties</h3>
                 <div class="properties-menu-container">
                     <ul>
-                        <?php for ($i=0; $i < 3; $i++): ?>
+                        <?php for ($i=0; $i < 4; $i++): ?>
                         <li class="properties-menu-item">
                             <a href="<?php echo get_category_link(get_option('property_'.$i.'_page')); ?>">
                                 <?php echo get_option('property_'.$i.'_name'); ?>

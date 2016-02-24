@@ -1,8 +1,25 @@
 <?php
 
+require_once("../../../wp-blog-header.php");
+
 error_reporting(E_ERROR);
 
 function send ($error, $message) {
+    if (!$error) {
+        $to = get_option("contact_email");
+        $subject = "New Email from OurCondoRental.com";
+        $content = "
+            Name: ".$_POST['name']."<br/>
+            Email: ".$_POST['email']."<br/>
+            Phone: ".$_POST['phone']."<br/>
+            Dates: ".$_POST['date-from']." to ".$_POST['date-to']."<br/>
+            Message: ".$_POST['message']."
+        ";
+        if (!wp_mail($to, $subject, $content)) {
+            $error = true;
+            $message = "Email was not able to successfuly send!";
+        }
+    }
     echo json_encode(array(
         'error' => $error,
         'message' => $message,

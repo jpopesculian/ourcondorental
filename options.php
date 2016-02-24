@@ -51,7 +51,7 @@
         </div>
 		<div class="form-group">
 			<h3>Property Cards</h3>
-			<?php for ($i=0; $i < 3; $i++): ?>
+			<?php for ($i=0; $i < 4; $i++): ?>
 			<h4>Property <?php echo $i + 1; ?></h4>
 			<div class="form-group">
 				<label for="property_<?php echo $i; ?>_name">Name</label>

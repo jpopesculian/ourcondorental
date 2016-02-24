@@ -351,12 +351,12 @@ form.error .flash {
     text-align: center; }
     .hero-unit .content h1, .hero-unit .content h2 {
       text-shadow: 0 0 0.71429em rgba(0, 0, 0, 0.5);
-      margin: 0 auto; }
-    .hero-unit .content h1 {
-      max-width: 10.71429em; }
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 1.5em; }
     .hero-unit .content h2 {
       margin-top: 1.42857em;
-      max-width: 25.71429em; }
+      padding: 0 3em; }
     .hero-unit .content .button {
       margin-top: 2.14286em;
       font-size: 1.28571em;
@@ -396,7 +396,7 @@ form.error .flash {
       transition-timing-function: ease-in-out;
       transition-duration: 0.2s;
       top: 0;
-      width: 32%; }
+      width: 24%; }
       @media screen and (max-width: 960px) {
         .property-cards .row .property-card {
           width: 100%;
@@ -427,7 +427,11 @@ form.error .flash {
         .property-cards .row .property-card .title h3 {
           font-size: 1.71429em;
           font-weight: bold;
-          margin-bottom: 0.21429em; }
+          margin-bottom: .3em;
+          min-height: 2.3em; }
+          @media screen and (max-width: 1130px) {
+            .property-cards .row .property-card .title h3 {
+              min-height: 0; } }
         .property-cards .row .property-card .title h4 {
           text-transform: uppercase; }
       .property-cards .row .property-card .thumbnail {
@@ -440,10 +444,10 @@ form.error .flash {
       .property-cards .row .property-card:nth-child(5) .thumbnail {
         background-image: url("img/property-2-card.jpg"); }
       .property-cards .row .property-card .description {
-        padding: 2.28571em;
-        font-size: 1.14286em;
-        color: #6a6e81;
-        line-height: 110%; }
+        padding: 1.14286em;
+        font-size: 1em;
+        color: #535665;
+        line-height: 1.4em; }
         @media screen and (max-width: 1130px) {
           .property-cards .row .property-card .description {
             padding: 1.14286em; } }

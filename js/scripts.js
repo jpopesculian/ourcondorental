@@ -266,6 +266,12 @@ function SmoothScroller(navEl) {
 
 new SmoothScroller(document.getElementById("sliding-nav"));
 
+function scrollToProperties() {
+    var elem = document.getElementById("home-property-cards");
+    var position = getOffsetTop(elem);
+    animateScroll(position, false, 90);
+}
+
 /////////////////////////////////////////
 // DATE PICKER STUFF ////////////////////
 /////////////////////////////////////////
@@ -387,7 +393,6 @@ function sendForm( formId, url ) {
         try {
             response = JSON.parse(response);
         } catch (e) {
-            console.error(e);
             return flashError('Something wen\'t wrong sending email');
         }
         if (response.error) {
@@ -610,7 +615,6 @@ if (PhotoSwipe) {
     var outside_clicked = false;
 
     document.addEventListener("click", function(e) {
-        console.log("hello");
         if(nav != e.target) {
             nav.className = "";
             nav_toggle.className = "";

@@ -24,7 +24,7 @@ function register_theme_settings() {
     register_setting( 'theme_options_group', 'contact_phone_cell' );
     register_setting( 'theme_options_group', 'contact_email' );
 	// property cards
-	for ($i=0; $i < 3; $i++) {
+	for ($i=0; $i < 4; $i++) {
 		register_setting( 'theme_options_group', 'property_'.$i.'_name' );
 		register_setting( 'theme_options_group', 'property_'.$i.'_loc' );
 		register_setting( 'theme_options_group', 'property_'.$i.'_descr' );
