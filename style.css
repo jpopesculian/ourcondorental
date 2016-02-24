@@ -443,6 +443,8 @@ form.error .flash {
         background-image: url("img/property-1-card.jpg"); }
       .property-cards .row .property-card:nth-child(5) .thumbnail {
         background-image: url("img/property-2-card.jpg"); }
+      .property-cards .row .property-card:nth-child(7) .thumbnail {
+        background-image: url("img/property-3-card.jpg"); }
       .property-cards .row .property-card .description {
         padding: 1.14286em;
         font-size: 1em;

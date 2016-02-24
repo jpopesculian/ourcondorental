@@ -118,6 +118,10 @@
 				background-image: url('img/property-2-card.jpg');
 			}
 
+			&:nth-child(7) .thumbnail {
+				background-image: url('img/property-3-card.jpg');
+			}
+
 			.description {
 				padding: em(16);
 				font-size: em(14);
