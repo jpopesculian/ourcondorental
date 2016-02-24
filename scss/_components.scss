@@ -1,0 +1,193 @@
+.hero-unit {
+	width: 100%;
+	background-image: url('img/banner.jpg');
+	background-size: cover;
+	background-position: center;
+	height: em(400);
+	display: table;
+	margin-bottom: em(30);
+
+	.content {
+		display: table-cell;
+		vertical-align: middle;
+		color: $white;
+		text-align: center;
+
+		h1, h2 {
+			text-shadow: 0 0 em(10) transparentize($black, 0.5);
+			margin: 0 auto;
+		}
+
+		h1 {
+			max-width: em(150);
+		}
+
+		h2 {
+			margin-top: em(20);
+			max-width: em(360);
+		}	
+
+		.button {
+			margin-top: em(30);
+			font-size: em(18);
+			font-weight: bold;
+		}
+	}
+}
+
+.property-cards {
+	$card-spacing: 2%;
+	margin: 0 auto;
+	width: 92%;
+	display: table;
+	table-layout: fixed;
+
+	.row {
+		display: table-row;
+
+        @include media($mobile) {
+            display: block;
+            overflow: auto;
+            zoom: 1;
+            position: relative;
+            margin-bottom: -em(30);
+        }
+
+		.property-card {
+			display: table-cell;
+			background: $white;
+			border: em(1) solid lighten($black, 85);
+			border-bottom: none;
+			@include box-shadow(0,0,em(10),transparentize($black, 0.8));
+			position: relative;
+			padding-bottom: em(50);
+			@include transition(all, 0.2s);
+			top: 0;
+			width: 32%;
+
+            @include media($mobile) {
+                width: 100%;
+                display: block;
+                margin-bottom: em(20);
+                float: left;
+            }
+
+			&:hover {
+				top: em(-7);
+				@include box-shadow(0,em(7),em(17),transparentize($black, 0.7));
+
+				.title {
+					color: lighten($deep-blue, 20);
+				}
+			}
+
+			.title {
+				color: $deep-blue;
+				text-align: center;
+				display: block;
+				padding: em(20);
+				@include transition(color, 0.2s);
+
+				h3 {
+					font-size: em(24);
+					font-weight: bold;
+					margin-bottom: em(3);
+				}
+
+				h4 {
+					text-transform: uppercase;
+				}
+
+			}
+
+			.thumbnail {
+				background-image: url('img/property-0-card.jpg');
+				background-position: center;
+				background-size: cover;
+				height: em(200);
+			}
+
+			&:nth-child(3) .thumbnail {
+				background-image: url('img/property-1-card.jpg');
+			}
+
+			&:nth-child(5) .thumbnail {
+				background-image: url('img/property-2-card.jpg');
+			}
+
+			.description {
+				padding: em(32);
+				font-size: em(16);
+				color: lighten($font-color, 20);
+				line-height: 110%;
+
+                @include media($nav-break) {
+                    padding: em(16);
+                }
+			}
+
+			.button {
+				text-align: center;
+				font-weight: bold;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+
+		}
+	}
+}
+
+.post-block {
+    width: 70%;
+    float: right;
+
+    .post-section {
+        padding-bottom: em(20);
+        border-bottom: darken($white, 10) em(1) solid;
+        margin-bottom: em(20);
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .post-content {
+        margin-top: em(20);
+        overflow: hidden;
+    }
+
+    a {
+        color: lighten($deep-blue, 20);
+
+        &:hover {
+            color: $orange;
+        }
+    }
+	
+	@include media($mobile) {
+		width: 100%;
+		margin-top: 2em;
+	}
+}
+
+.pw_map_canvas {
+    margin-bottom: em(10);
+}
+
+.contact-info {
+    width: 50%;
+    float: left;
+    padding: em(25) em(10);
+    border-top: darken($white, 10) em(1) solid;
+    border-bottom: darken($white, 10) em(1) solid;
+    @extend .readable-text;
+    h3 {
+        font-size: em(18);
+    }
+
+    @include media($mobile) {
+        width: 100%;
+    }
+}

@@ -1,0 +1,64 @@
+@function em($pixels, $context: 14) {
+	@return ($pixels / $context) * 1em;
+}
+
+@mixin transition($transition-property, $transition-time, $method: ease-in-out) {
+    -webkit-transition-property: $transition-property;
+    -webkit-transition-timing-function: $method;
+    -webkit-transition-duration:  $transition-time;
+    -moz-transition-property: $transition-property;
+    -moz-transition-timing-function: $method;
+    -moz-transition-duration:  $transition-time;
+    transition-property: $transition-property;
+    transition-timing-function: $method;
+    transition-duration:  $transition-time;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+	-webkit-box-shadow:$top $left $blur $color #{$inset};
+	-moz-box-shadow:$top $left $blur $color #{$inset};
+	box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+   -webkit-border-top-left-radius: $radius;
+   border-top-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+     -webkit-border-top-right-radius: $radius;
+     border-top-right-radius: $radius;
+     background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+   border-bottom-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+     -webkit-border-top-left-radius: $radius;
+     border-top-left-radius: $radius;
+     background-clip: padding-box;
+}
+
+@mixin media($res)
+{
+    @media screen and (max-width: $res)
+    {
+        @content;
+    }
+}

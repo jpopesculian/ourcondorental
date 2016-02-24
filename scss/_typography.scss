@@ -1,0 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+h1,h2 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: em(64);
+}
+
+h2 {
+	font-size: em(24);
+}
+
+#top-bar {
+	// font-family: Lato, sans-serif;
+}
+
+.page-title {
+    height: 161px;
+	font-size: em(70);
+	text-transform: uppercase;
+	color: $white;
+    background: url('img/header_bg.jpg') center repeat-x;
+    margin-bottom: 40px;
+    position: relative;
+
+    span {
+        @extend .wrap;
+        display: block;
+        overflow: visible;
+        padding: 50px 20px;
+    }
+
+    @include media($nav-break) {
+        font-size: em(60);
+        top: -20px;
+        span {
+            padding-top: 60px;
+        }
+    }
+
+    @include media($nav-break) {
+        font-size: em(50);
+        top: -30px;
+        span {
+            padding-top: 65px;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 161px;
+        background: url('img/header_fg.png') center repeat-x;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.readable-text {
+    font-size: em(15);
+    line-height: em(17);
+
+    ul {
+        padding: em(10) em(25);
+        list-style: square;
+
+        li {
+            padding: 0 em(7);
+        }
+    }
+
+    table {
+        margin-top: em(10);
+        font-size: em(12);
+        border-collapse: collapse;
+        text-align: left;
+        color: $deep-blue;
+        width: 100%;
+
+        thead {
+            vertical-align: baseline;
+
+            th {
+                text-transform: uppercase;
+                font-size: em(16);
+                padding: em(10) em(5);
+                border-bottom: em(2) solid $deep-blue;
+            }
+        }
+
+        tbody tr {
+            $table-text: #526579;
+            color: $table-text;
+            border-bottom: em(1) solid $table-text;
+
+           td {
+               padding: em(10) em(5);
+           }
+
+            &:hover {
+                color: $deep-blue;
+                background: darken($white, 3);
+            }
+        }
+    }
+}
