@@ -10,12 +10,13 @@
                         <li>Home: <?php create_phone_link(get_option('contact_phone_home')); ?></li>
                         <li>Cell: <?php create_phone_link(get_option('contact_phone_cell')); ?></li>
                         <li>Email: <?php create_email_link(get_option('contact_email')); ?></li>
+                        <li class="list-placeholder">&nbsp</li>
                     </ul>
                 </div>
                 <div class="contact-info">
                     <h3>For Pricing, Discounts & Availability</h3>
                     <ul>
-                    <?php for($i = 0; $i < 3; $i++): ?>
+                    <?php for($i = 0; $i < 4; $i++): ?>
                         <li><a href="<?php echo get_option('property_'.$i.'_listing'); ?>">
                                 <?php echo get_option('property_'.$i.'_name'); ?>
                             </a></li>

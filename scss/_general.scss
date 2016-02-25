@@ -64,3 +64,8 @@ html {
         font-size: .9em;
     }
 }
+
+li.list-placeholder {
+    visibility: hidden;
+    list-style: none;
+}
